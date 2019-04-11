@@ -9,22 +9,11 @@
 <body>
     <div id="Moka-App">
         <h1>Welcome to Vue Js Course</h1>
-        <ul>
-            <li v-for="skill in skills">
-                {{skill}}
-            </li>
-        </ul>
-        <ul>
-            <li v-for="(skill, index) in skills">
-                {{index+1}}- {{skill}}
+        <p v-if="name">Welcome {{name}} </p>
+        <p v-else-if="age>15 && age<40">You Are not too old</p>
+        <p v-else>You Are Still Young</p>
 
-            </li>
-        </ul>
-        <ul>
-            <li v-for="(test, index) in CompletedTests">        
-            {{index+1}}- {{test.testName}} Result is {{test.testResult}}
-            </li>
-        </ul>
+     
     </div>
 
     <script src="js/vue.js"></script>
@@ -32,27 +21,8 @@
     var vm = new Vue({
         el:'#Moka-App',
         data:{
-            name:'Hassan',
-            date:'Today',
-            age:'24',
-            skills:['HTML','CSS','JavaScript','Vue.js'],
-            isSubscriped: false,
-            theDate:'',
-            CompletedTests:[
-                {
-                testName : 'Test Number One',
-                testResult: '80%'
-                },
-                {
-                testName : 'Test Number Two',
-                testResult: '70%'
-                },
-                {
-                testName : 'Test Number Three',
-                testResult: '60%'
-                },
-            ],
-
+            name:'',
+            age:20,
         },
     })
     </script>
