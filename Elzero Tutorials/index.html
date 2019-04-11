@@ -7,6 +7,20 @@
     <title>Learn Vue Js</title>
 </head>
 <body>
-    
+    <div id="Moka-App">
+        <h1>Welcome to Vue Js Course</h1>
+        <p>Welcome {{'Mr ' + name}} We Are Happy To See You</p>
+        <p v-text="name"></p>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+    var vm = new Vue({
+        el:'#Moka-App',
+        data:{
+            name:'Hassan'
+        }
+    })
+    </script>
 </body>
 </html>
